@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ec">
+  <meta name="description" content="Pedidos, retirada e fidelidade da Rede Raízes do Nordeste.">
+  <title>Raízes do Nordeste — comida com memória</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%231b513f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='38'%3E%E2%98%80%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="top-note"><span class="note-dot"></span> Sabor de casa, do seu jeito <span class="top-note-separator">·</span> Peça agora e retire sem fila</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Raízes do Nordeste, início">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span class="brand-wordmark"><strong>raízes</strong><small>DO NORDESTE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a><a href="#fidelidade">Raízes Club</a><a href="#sobre">Nossa casa</a>
+    </nav>
+    <div class="header-actions">
+      <label class="channel-select"><span class="sr-only">Canal</span><select id="channel-select" aria-label="Escolha o canal"><option value="web">Web</option><option value="app">Aplicativo</option><option value="totem">Totem da loja</option></select><span aria-hidden="true">⌄</span></label>
+      <button class="account-button order-shortcut" id="order-open" type="button" hidden><span class="account-icon" aria-hidden="true">◷</span><span class="account-label">Meu pedido</span></button>
+      <button class="account-button" id="account-open" type="button"><span class="account-icon" aria-hidden="true">♙</span><span class="account-label">Entrar</span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> DA NOSSA TERRA PARA A SUA MESA</p>
+        <h1 id="hero-title">Um pedacinho<br>do Nordeste <em>perto.</em></h1>
+        <p class="hero-text">Cuscuz quentinho, tapioca feita na hora e aquele gostinho de casa. Escolha sua unidade e peça para retirar.</p>
+        <a class="button button-sun" href="#cardapio">Ver o cardápio <span aria-hidden="true">↗</span></a>
+        <div class="hero-proof"><span class="proof-stars" aria-hidden="true">★★★★★</span><span>Feito com afeto em cada unidade</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun-disc"></div>
+        <svg class="hero-meal" viewBox="0 0 560 470" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="plate-glaze" cx="38%" cy="30%"><stop stop-color="#fffdf2"/><stop offset=".72" stop-color="#f2ead5"/><stop offset="1" stop-color="#d8caab"/></radialGradient>
+            <linearGradient id="couscous" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ffd96a"/><stop offset=".6" stop-color="#e5a92e"/><stop offset="1" stop-color="#c88324"/></linearGradient>
+            <linearGradient id="beef" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9b4e32"/><stop offset="1" stop-color="#542e24"/></linearGradient>
+            <pattern id="corn-grain" width="17" height="15" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.3" fill="#fff0a1"/><circle cx="12" cy="9" r="1.2" fill="#b66f20"/><circle cx="7" cy="14" r=".8" fill="#f8ce53"/></pattern>
+            <filter id="dish-shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="9"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".3"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <ellipse cx="280" cy="258" rx="220" ry="157" fill="#092e24" opacity=".25"/>
+          <g transform="rotate(-11 280 228)" filter="url(#dish-shadow)">
+            <ellipse cx="280" cy="224" rx="218" ry="156" fill="url(#plate-glaze)" stroke="#fff9e8" stroke-width="10"/>
+            <ellipse cx="280" cy="224" rx="194" ry="135" fill="none" stroke="#d2bd83" stroke-width="3"/>
+            <ellipse cx="280" cy="224" rx="181" ry="122" fill="#f9f3df" stroke="#fffdf4" stroke-width="8"/>
+            <ellipse cx="280" cy="224" rx="166" ry="108" fill="none" stroke="#e7dcc0" stroke-width="2" stroke-dasharray="2 8"/>
+            <g fill="#c7a65d" opacity=".75">
+              <circle cx="105" cy="224" r="2.8"/><circle cx="118" cy="178" r="2.8"/><circle cx="142" cy="143" r="2.8"/><circle cx="178" cy="116" r="2.8"/><circle cx="223" cy="99" r="2.8"/>
+              <circle cx="455" cy="224" r="2.8"/><circle cx="442" cy="178" r="2.8"/><circle cx="418" cy="143" r="2.8"/><circle cx="382" cy="116" r="2.8"/><circle cx="337" cy="99" r="2.8"/>
+            </g>
+            <path d="M145 234 C142 203 156 166 185 148 C206 135 235 136 257 146 C277 155 293 178 293 202 C294 226 280 254 253 268 C218 286 177 271 157 253 Z" fill="url(#couscous)" stroke="#bd7927" stroke-width="3"/>
+            <path d="M145 234 C142 203 156 166 185 148 C206 135 235 136 257 146 C277 155 293 178 293 202 C294 226 280 254 253 268 C218 286 177 271 157 253 Z" fill="url(#corn-grain)" opacity=".72"/>
+            <path d="M158 240 C193 254 240 250 278 226" fill="none" stroke="#ffe696" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+            <path d="M178 164 C201 151 229 155 245 170" fill="none" stroke="#fff0ad" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+            <path d="M293 178 C319 160 365 166 389 190 C414 215 402 251 376 265 C345 282 303 266 286 243 C272 224 276 194 293 178 Z" fill="url(#beef)"/>
+            <g fill="none" stroke-linecap="round">
+              <path d="M292 194 C319 202 330 181 357 188 C371 192 385 207 397 204" stroke="#bf7950" stroke-width="8"/>
+              <path d="M283 211 C309 218 322 201 344 207 C365 213 377 229 399 224" stroke="#e0a16c" stroke-width="6"/>
+              <path d="M288 231 C315 232 321 249 347 245 C367 242 376 231 394 241" stroke="#a95e3e" stroke-width="8"/>
+              <path d="M299 251 C321 238 335 260 355 255 C369 252 378 243 388 251" stroke="#d28a59" stroke-width="5"/>
+              <path d="M305 184 C311 204 300 222 315 241" stroke="#7d402f" stroke-width="4"/>
+              <path d="M343 178 C337 198 358 210 350 229" stroke="#f0b27c" stroke-width="4"/>
+              <path d="M371 192 C361 207 381 219 373 235" stroke="#87452f" stroke-width="4"/>
+            </g>
+            <path d="M201 286 C226 276 251 278 270 288" fill="none" stroke="#e1b94b" stroke-width="8" stroke-linecap="round"/>
+            <g fill="#617a48" stroke="#f4f0d8" stroke-width="1.5">
+              <path d="M266 177 C248 171 246 157 256 152 C270 151 277 164 266 177Z"/><path d="M270 178 C276 158 292 155 298 165 C297 178 281 184 270 178Z"/><path d="M270 180 C250 183 245 196 255 202 C269 201 277 189 270 180Z"/><path d="M272 179 C288 184 292 197 284 203 C272 201 266 187 272 179Z"/>
+              <path d="M376 165 C361 160 360 148 369 144 C381 144 387 156 376 165Z"/><path d="M379 166 C385 151 397 151 402 159 C399 170 387 173 379 166Z"/>
+            </g>
+            <circle cx="314" cy="168" r="8" fill="#d75e42"/><circle cx="325" cy="163" r="5" fill="#a83f31"/>
+          </g>
+          <path d="M100 112 C78 97 69 76 86 66 C107 66 118 86 100 112Z" fill="#718c59"/><path d="M106 111 C112 86 133 79 143 91 C141 111 123 121 106 111Z" fill="#9cad72"/>
+          <path d="M469 333 C447 317 443 295 458 286 C478 291 484 314 469 333Z" fill="#718c59"/><path d="M473 333 C483 309 502 304 510 317 C504 337 488 342 473 333Z" fill="#a5b87b"/>
+        </svg>
+        <div class="hero-leaf leaf-one">✿</div><div class="hero-leaf leaf-two">✿</div>
+        <div class="hero-stamp"><span>FEITO</span><strong>COM<br>AFETO</strong><i>✳</i></div>
+        <div class="hero-caption">Nordeste<br>é tempero, é abraço.</div>
+      </div>
+      <div class="hero-bottom"><span>Receitas que contam histórias</span><span>⌄</span></div>
+    </section>
+
+    <section class="order-intro page-wrap" aria-label="Escolha a unidade">
+      <div class="intro-left"><span class="intro-icon" aria-hidden="true">⌖</span><div><p class="micro-label">PEDIDO PARA RETIRADA</p><h2>Qual é a sua unidade?</h2><p id="unit-description">Cozinha completa · Retirada em 15–20 min</p></div></div>
+      <label class="unit-picker"><span class="sr-only">Selecione uma unidade</span><select id="unit-select"><option value="recife">Recife · Boa Viagem</option><option value="olinda">Olinda · Centro</option><option value="caruaru">Caruaru · Maurício de Nassau</option></select><span aria-hidden="true">⌄</span></label>
+    </section>
+
+    <section class="menu-section page-wrap" id="cardapio" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> COMIDA DE VERDADE</p><h2 id="menu-title">Feito aqui, <em>com carinho.</em></h2><p>Receitas da nossa terra, preparadas fresquinhas para você.</p></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar no cardápio</span><input id="menu-search" type="search" placeholder="Buscar no cardápio" autocomplete="off"></label>
+      </div>
+      <div class="category-row" id="category-row" aria-label="Filtrar por categoria"></div>
+      <div class="menu-layout">
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <aside class="cart-panel" aria-labelledby="cart-title">
+          <div class="cart-title-row"><div><p class="micro-label">SUA ESCOLHA</p><h3 id="cart-title">Sacola <span id="cart-count" class="cart-count">0</span></h3></div><span class="cart-bag" aria-hidden="true">⌑</span></div>
+          <div class="cart-lines" id="cart-lines"><div class="empty-cart"><span aria-hidden="true">☼</span><strong>Tem espaço pra coisa boa.</strong><p>Adicione algo do cardápio para começar.</p></div></div>
+          <div class="cart-footer" id="cart-footer" hidden>
+            <div class="cart-subtotal"><span>Total do pedido</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+            <div class="cart-subtotal reward-discount-row" id="cart-discount-row" hidden><span>Raízes Club · resgate</span><strong>- R$ 5,00</strong></div>
+            <p class="cart-note">Retirada na unidade · sem taxa</p>
+            <button class="button button-primary button-full" id="checkout-open" type="button">Continuar pedido <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="cart-smallprint"><span aria-hidden="true">♧</span> Ingredientes e disponibilidade variam por unidade.</div>
+        </aside>
+      </div>
+      <p class="menu-disclaimer">Disponibilidade atualizada para <strong id="selected-unit-name">Recife · Boa Viagem</strong>. Itens sazonais aparecem quando estiverem disponíveis.</p>
+    </section>
+
+    <section class="campaign-band page-wrap" aria-label="Campanha especial">
+      <div class="campaign-icon" aria-hidden="true">✿</div><div class="campaign-copy"><p class="micro-label">TEMPO DE CELEBRAR</p><h2>Festa boa pede <em>mesa farta.</em></h2><p>Novidades e promoções variam por unidade e época. Em produção, campanhas só chegam com sua autorização.</p></div><button class="text-button" id="campaign-details" type="button">Conheça as campanhas <span aria-hidden="true">↗</span></button><div class="campaign-pattern" aria-hidden="true">✳　✿　✳</div>
+    </section>
+
+    <section class="loyalty-section page-wrap" id="fidelidade" aria-labelledby="loyalty-title">
+      <div class="loyalty-copy"><p class="eyebrow"><span class="eyebrow-line"></span> CADA VISITA VALE</p><h2 id="loyalty-title">O carinho volta<br>em <em>recompensas.</em></h2><p>No Raízes Club, cada compra soma pontos para trocar por benefícios. A participação é gratuita e você controla suas preferências.</p><button class="button button-outline" id="rewards-open" type="button">Ver recompensas <span aria-hidden="true">→</span></button><p class="loyalty-fine">Saldo ilustrativo: 120 pontos · sem valor financeiro.</p></div>
+      <div class="loyalty-card"><div class="loyalty-card-top"><span class="loyalty-brand">raízes<span>club</span></span><span class="loyalty-flower" aria-hidden="true">✿</span></div><div class="loyalty-points"><strong id="loyalty-points-value">120</strong><span>pontos</span></div><div class="loyalty-progress"><span id="loyalty-progress-value" style="width:24%"></span></div><div class="loyalty-card-bottom"><span>Mais visitas, mais vantagens.</span><span>RAÍZES CLUB</span></div><div class="loyalty-card-seal" aria-hidden="true">RC</div></div>
+    </section>
+
+    <section class="values-strip" id="sobre"><div class="page-wrap values-inner"><div><span class="value-icon">♨</span><strong>Feito na hora</strong><small>Fresquinho, como tem que ser.</small></div><div><span class="value-icon">⌖</span><strong>Na sua unidade</strong><small>Um cardápio para cada cozinha.</small></div><div><span class="value-icon">♡</span><strong>Com respeito</strong><small>Seus dados, sob seu controle.</small></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="page-wrap footer-inner"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-wordmark"><strong>raízes</strong><small>DO NORDESTE</small></span></a><p>Tradição com um toque de tecnologia.</p><div class="footer-links"><button type="button" id="privacy-open">Privacidade e LGPD</button></div><small class="copyright">© 2026 Raízes do Nordeste · Projeto acadêmico · Trilha Front-End</small></div></footer>
+
+  <div class="mobile-cart-bar" id="mobile-cart-bar" hidden><div><strong id="mobile-cart-count">0 itens</strong><span id="mobile-cart-total">R$ 0,00</span></div><button class="button button-primary" id="mobile-checkout" type="button">Ver sacola <span aria-hidden="true">→</span></button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="account-dialog" aria-labelledby="account-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="modal-kicker">BEM-VINDO(A) À NOSSA CASA</div><h2 id="account-title">Acesse o <em>Raízes Club.</em></h2><p class="modal-lead">Entre para acompanhar pontos e pedidos. Este protótipo não envia nem salva dados de cadastro.</p><form id="account-form"><label class="field-label" for="account-email">E-mail</label><input class="text-input" id="account-email" type="email" autocomplete="email" placeholder="voce@email.com" required><div class="account-mode"><label><input type="radio" name="account-mode" value="login" checked> Já tenho cadastro</label><label><input type="radio" name="account-mode" value="register"> Quero me cadastrar</label></div><p class="privacy-inline">Ao continuar, você pode consultar como usamos seus dados em <button type="button" class="inline-button" data-open-privacy>Privacidade e LGPD</button>. O consentimento para campanhas é opcional.</p><button class="button button-primary button-full" type="submit">Continuar <span aria-hidden="true">→</span></button><p class="demo-label">Acesso e cadastro sem integração de autenticação.</p></form></dialog>
+
+  <dialog class="modal modal-wide" id="checkout-dialog" aria-labelledby="checkout-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="modal-kicker">QUASE NA MESA</div><h2 id="checkout-title">Confirme seu <em>pedido.</em></h2><div class="checkout-grid"><form id="checkout-form" novalidate><div class="form-row"><div><label class="field-label" for="customer-name">Como podemos chamar você?</label><input class="text-input" id="customer-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" required placeholder="Seu nome"></div><div><label class="field-label" for="customer-phone">Celular para avisar quando ficar pronto</label><input class="text-input" id="customer-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000"></div></div><label class="field-label" for="pickup-time">Horário de retirada</label><select class="text-input" id="pickup-time" name="pickup"><option>Assim que ficar pronto (15–20 min)</option><option>Em 30 minutos</option><option>Em 45 minutos</option></select><fieldset class="payment-options"><legend>Como prefere pagar?</legend><label><input type="radio" name="payment-method" value="pix" checked><span class="payment-option-icon">✦</span><span><strong>Pix</strong><small>Confirmação pelo parceiro</small></span></label><label><input type="radio" name="payment-method" value="card"><span class="payment-option-icon">▤</span><span><strong>Cartão</strong><small>Pagamento protegido pelo parceiro</small></span></label></fieldset><details class="demo-payment"><summary>Retorno simulado do parceiro de pagamento</summary><label for="payment-result">Retorno simulado pelo parceiro</label><select id="payment-result" class="text-input"><option value="approved">Pagamento aprovado</option><option value="declined">Pagamento recusado</option><option value="offline">Serviço indisponível (tempo esgotado)</option></select><small>Selecione um retorno para visualizar aprovação, recusa e indisponibilidade.</small></details><div class="privacy-consent"><p><strong>Como usamos seus dados</strong><br>Nome e celular são usados nesta simulação para identificar o pedido e exibir atualizações. Eles não são enviados a um servidor nem ficam salvos neste navegador. O parceiro externo recebe somente código, valor e forma de pagamento simulados. <button type="button" class="inline-button" data-open-privacy>Saiba mais sobre privacidade</button>.</p><label class="marketing-check"><input type="checkbox" id="marketing-consent"><span>Quero receber campanhas e novidades por e-mail ou WhatsApp. (opcional)</span></label></div><button class="button button-primary button-full submit-order" type="submit"><span id="submit-order-label">Enviar pedido para pagamento</span><span aria-hidden="true">→</span></button><p class="no-card-data">Não digite dados de cartão: nenhum pagamento real é processado.</p></form><aside class="checkout-summary"><p class="micro-label">RESUMO DO PEDIDO</p><div id="checkout-lines"></div><div class="summary-total"><span>Total</span><strong id="checkout-total">R$ 0,00</strong></div><p class="summary-unit"><span aria-hidden="true">⌖</span> Retirada em <strong id="checkout-unit">Recife · Boa Viagem</strong></p><div class="gateway-note"><span aria-hidden="true">↗</span><span>Pagamento realizado por parceiro externo. A loja só recebe o resultado e atualiza o pedido.</span></div></aside></div><div class="payment-state" id="payment-state" hidden aria-live="polite"></div></dialog>
+
+  <dialog class="modal" id="order-dialog" aria-labelledby="order-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="order-success-icon" id="order-state-icon" aria-hidden="true">✓</div><div class="modal-kicker" id="order-kicker">PAGAMENTO CONFIRMADO</div><h2 id="order-title">Pedido recebido <em>com carinho.</em></h2><p class="modal-lead" id="order-message">O estado do pedido é ilustrativo; a unidade não recebeu a solicitação.</p><div class="order-ticket"><div><span>CÓDIGO DO PEDIDO</span><strong id="order-code">RN-0000</strong></div><div><span>UNIDADE</span><strong id="order-unit">Recife · Boa Viagem</strong></div></div><div class="order-timeline" id="order-timeline"></div><button class="button button-outline button-full" id="advance-status" type="button">Simular próxima atualização <span aria-hidden="true">→</span></button><button class="text-button centered" id="close-order" type="button">Continuar no cardápio</button><p class="demo-label">Status ilustrativo; este pedido não foi enviado à unidade.</p></dialog>
+
+  <dialog class="modal" id="privacy-dialog" aria-labelledby="privacy-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="modal-kicker">TRANSPARÊNCIA SEM LETRAS MIÚDAS</div><h2 id="privacy-title">Privacidade com <em>respeito.</em></h2><p class="modal-lead">A Raízes do Nordeste usa o mínimo de dados necessário para que a experiência funcione. Nesta versão acadêmica, todas as integrações são simuladas.</p><div class="privacy-points"><article><span>01</span><div><strong>Pedido</strong><p>Nome e celular são informados para identificar o pedido e acompanhar sua retirada. Neste protótipo, esses campos não são enviados nem persistidos.</p></div></article><article><span>02</span><div><strong>Fidelidade e campanhas</strong><p>O programa é opcional. Campanhas só devem ser enviadas após consentimento específico, livre e revogável. Não condicionamos o pedido à publicidade.</p></div></article><article><span>03</span><div><strong>Pagamento externo</strong><p>O serviço parceiro processa a transação. A interface envia somente o identificador, o valor e o método; o sistema registra aprovado, recusado ou indisponível.</p></div></article><article><span>04</span><div><strong>Seus direitos</strong><p>Em produção, o titular poderia solicitar acesso, correção, eliminação quando aplicável, revogar consentimentos e contatar o canal do encarregado da rede.</p></div></article></div><div class="privacy-footnote">Base do projeto: Lei nº 13.709/2018 (LGPD). Esta interface é um protótipo acadêmico e não substitui o aviso de privacidade oficial da rede.</div></dialog>
+
+  <dialog class="modal" id="rewards-dialog" aria-labelledby="rewards-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="modal-kicker">RAÍZES CLUB · SALDO ILUSTRATIVO <span id="rewards-balance">120</span> PONTOS</div><h2 id="rewards-title">Troque pontos por <em>afeto.</em></h2><div class="rewards-list"><article><span class="reward-mark">R$</span><div><strong>R$ 5 de desconto</strong><small>Disponível a partir de 100 pontos</small></div><button type="button" class="button button-small" id="reward-redeem" data-reward="5">Resgatar</button></article><article><span class="reward-mark">☕</span><div><strong>Café coado por nossa conta</strong><small>Disponível a partir de 200 pontos</small></div><button type="button" class="button button-small" disabled>200 pts</button></article><article><span class="reward-mark">♡</span><div><strong>Combo café da manhã</strong><small>Disponível a partir de 500 pontos</small></div><button type="button" class="button button-small" disabled>500 pts</button></article></div><p class="demo-label">Pontos e recompensas ilustrativos; o desconto altera o total apenas neste protótipo.</p></dialog>
+
+  <dialog class="modal" id="campaign-dialog" aria-labelledby="campaign-title"><form method="dialog" class="modal-close-form"><button class="modal-close" aria-label="Fechar">×</button></form><div class="modal-kicker">PROMOÇÕES E CAMPANHAS</div><h2 id="campaign-title">Novidades com <em>sabor local.</em></h2><div class="campaign-modal-card"><span>✿</span><div><strong>Sabores de São João</strong><p>Receitas sazonais, como pamonha e bolo de milho, aparecem no cardápio das unidades participantes durante o período junino.</p></div></div><div class="campaign-modal-card"><span>☼</span><div><strong>Bom dia, com cuscuz</strong><p>Campanhas podem variar por unidade e horário. Preferências de comunicação são opcionais e podem ser alteradas a qualquer momento.</p></div></div><button class="button button-outline button-full" type="button" data-open-privacy>Entenda como protegemos seus dados</button></dialog>
+</body>
+</html>
